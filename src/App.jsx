@@ -1,8 +1,16 @@
 import "./App.css";
-import Calculator from "./pages/Calculator";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <Calculator />;
+  return (
+    <div>
+      <Navbar />
+      <div className="w-[75%] mx-auto mt-8">
+        <Outlet></Outlet>
+      </div>
+    </div>
+  );
 }
 
 export default App;
